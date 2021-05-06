@@ -1,1 +1,4 @@
 name: zephyr-dfrobot-spl
+build:
+  settings:
+    dts_root: .

@@ -1,0 +1,20 @@
+# Copyright (c) 2021 Henrik Brix Andersen <henrik@brixandersen.dk>
+# SPDX-License-Identifier: Apache-2.0
+
+description: DFRobot SEN0232 Sound Level Meter
+
+compatible: "dfrobot,sen0232"
+
+include: base.yaml
+
+properties:
+  io-channels:
+    required: true
+    description: |
+      ADC channel connected to the sound level meter output.
+
+  reference-voltage:
+    type: int
+    required: true
+    description: |
+      ADC reference voltage in millivolts.
