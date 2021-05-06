@@ -1,0 +1,14 @@
+/*
+ * Copyright (c) 2021 Henrik Brix Andersen <henrik@brixandersen.dk>
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/ {
+        dfrobot_sen0232: dfrobot_sen0232 {
+                compatible = "dfrobot,sen0232";
+                io-channels = <&arduino_adc 2>;
+		/* TODO: reference voltage for nRF and others */
+                reference-voltage = <600>;
+        };
+};
