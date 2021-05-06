@@ -1,0 +1,21 @@
+# DFRobot SEN0232 Sound Pressure Meter configuration options
+
+# Copyright (c) 2021 Henrik Brix Andersen <henrik@brixandersen.dk>
+# SPDX-License-Identifier: Apache-2.0
+
+config DFROBOT_SEN0232
+	bool "DFRobot Sound Pressure Meter"
+	depends on ADC
+	help
+	  Enable driver for the DFRobot SEN0232 Sound Pressure Meter.
+
+config DFROBOT_SEN0232_RESOLUTION
+	int "ADC resolution"
+	depends on DFROBOT_SEN0232
+	default 10 if HAS_HW_NRF_ADC
+	default 12 if HAS_MCUX_ADC12
+	default 14 if HAS_HW_NRF_SAADC
+	default 16 if HAS_MCUX_ADC16
+	help
+	  ADC resolution to use for the sound pressure level sensor
+	  voltage readings.

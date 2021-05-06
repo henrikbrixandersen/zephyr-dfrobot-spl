@@ -1,0 +1,5 @@
+# Copyright (c) 2021 Henrik Brix Andersen <henrik@brixandersen.dk>
+# SPDX-License-Identifier: Apache-2.0
+
+zephyr_library()
+zephyr_library_sources_ifdef(CONFIG_DFROBOT_SEN0232 dfrobot_sen0232.c)
